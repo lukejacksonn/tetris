@@ -1,0 +1,16 @@
+{
+  "name": "sapling",
+  "version": "1.0.0",
+  "description": "A super minimal setup for modern web projects.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx servor"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "lukejacksonn",
+  "license": "MIT"
+}
