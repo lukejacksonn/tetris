@@ -4,7 +4,7 @@ import { link } from '../utils/router.js'
 import { pieceToGrid, colors } from '../models/pieces.js'
 
 const { html, head, title, meta, body } = DOM
-const { svg, rect } = DOM
+const { h1, svg, rect } = DOM
 
 const Grid = grid =>
   svg(
@@ -30,5 +30,10 @@ export default state =>
       title('Home'),
       meta({ type: 'description', content: 'Welcome to this web app' }),
     ]),
-    body([Grid(pieceToGrid(state.grid, state.piece))]),
+    body([
+      h1(`Score: ${state.score}`),
+      h1(`Lines: ${state.lines}`),
+      h1(`Level: ${state.level}`),
+      Grid(pieceToGrid(state.grid, state.piece)),
+    ]),
   ])

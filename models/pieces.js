@@ -1,16 +1,5 @@
 import { gridIndices, gridCoords } from './grid.js'
 
-export const colors = [
-  '#000',
-  '#f00',
-  '#0f0',
-  '#00f',
-  '#ff0',
-  '#f0f',
-  '#0ff',
-  '#ccc',
-]
-
 const pieces = [
   [],
   [[0, 0], [-1, 0], [1, 0], [0, 1]], // T
@@ -20,6 +9,26 @@ const pieces = [
   [[0, 0], [1, 1], [0, 1], [-1, 0]], // S
   [[0, 0], [0, 1], [1, 1], [1, 0]], // O
   [[0, 0], [0, 1], [0, 2], [0, -1]], // I
+]
+
+const isInside = piece =>
+  gridCoords(piece).reduce(
+    (ok, [x, y]) => ok && x >= 0 && x <= 9 && y >= 0,
+    true
+  )
+
+const isFree = (grid, piece) =>
+  gridIndices(piece).reduce((ok, i) => ok && (i >= 200 || grid[i] === 0), true)
+
+export const colors = [
+  '#000',
+  '#f00',
+  '#0f0',
+  '#00f',
+  '#ff0',
+  '#f0f',
+  '#0ff',
+  '#ccc',
 ]
 
 export const makePiece = () => {
@@ -37,16 +46,5 @@ export const pieceToGrid = (grid, piece) => {
   return grid
 }
 
-export const isPieceLegal = (_ => {
-  const isInside = piece =>
-    gridCoords(piece).reduce(
-      (ok, [x, y]) => ok && x >= 0 && x <= 9 && y >= 0,
-      true
-    )
-  const isFree = (grid, piece) =>
-    gridIndices(piece).reduce(
-      (ok, i) => ok && (i >= 200 || grid[i] === 0),
-      true
-    )
-  return (grid, piece) => isFree(grid, piece) && isInside(piece)
-})()
+export const isPieceLegal = (grid, piece) =>
+  isFree(grid, piece) && isInside(piece)
