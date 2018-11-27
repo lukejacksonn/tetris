@@ -24,6 +24,25 @@ const Grid = grid =>
     })
   )
 
+const Preview = piece =>
+  svg(
+    {
+      viewBox: '0, 0, 20, 20',
+      height: '100px',
+      style: { background: '#000' },
+    },
+    piece.squares.map((square, i) => {
+      const [x, y] = square
+      return rect({
+        x: 8 + x * 4,
+        y: 6 + y * 4,
+        width: '4',
+        height: '4',
+        fill: colors[piece.type],
+      })
+    })
+  )
+
 export default state =>
   html([
     head([
@@ -34,6 +53,7 @@ export default state =>
       h1(`Score: ${state.score}`),
       h1(`Lines: ${state.lines}`),
       h1(`Level: ${state.level}`),
+      Preview(state.nextPiece),
       Grid(pieceToGrid(state.grid, state.piece)),
     ]),
   ])

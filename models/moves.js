@@ -61,7 +61,8 @@ export const move = (m = x => x) => state => {
     return {
       ...state,
       grid: newGrid,
-      piece: makePiece(),
+      nextPiece: makePiece(),
+      piece: state.nextPiece,
       score: lines > 0 ? state.score + points(state.level)[lines] : state.score,
       lines: lines > 0 ? state.lines + lines : state.lines,
       level:
@@ -72,6 +73,7 @@ export const move = (m = x => x) => state => {
   // It is game over
   return {
     ...state,
+    nextPiece: makePiece(),
     piece: makePiece(),
     grid: makeGrid(),
     score: 0,

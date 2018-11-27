@@ -13,10 +13,11 @@ import {
 
 app({
   init: {
+    nextPiece: makePiece(),
     piece: makePiece(),
     grid: makeGrid(),
     score: 0,
-    level: 7,
+    level: 1,
     lines: 0,
   },
   subscriptions: state => [
