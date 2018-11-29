@@ -9,7 +9,7 @@ The idea of a game came up and it seemed like a good theme to run with; limited 
 A lot of the code has been copied and adapted from two codepens:
 
 - [Falling blocks](https://codepen.io/zaceno/pen/JreKPN) by [Zacharias Enochsson](https://github.com/zaceno) built with Hyperapp V1
-- [Saigon Racer](https://codepen.io/zaceno/pen/JreKPN) by [Luke Jackson](https://github.com/lukejacksonn) built with Hyperapp V2
+- [Saigon Racer](https://codepen.io/lukejacksonn/pen/dqLPGz) by [Luke Jackson](https://github.com/lukejacksonn) built with Hyperapp V2
 
 ## Output
 
