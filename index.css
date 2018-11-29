@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  width: 100%;
+  height: 100vh;
+  background: url('/bg.png');
+  background-size: 100px;
+}
+
+score,
+level,
+lines,
+preview,
+game {
+  padding: 16px;
+  background: #000;
+  border: 4px solid #99ffff;
+  outline: 8px groove #525252;
+}
+
+game,
+preview {
+  border-width: 8px;
+}
+
+game {
+  padding: 0;
+}
+
+score {
+  grid-area: score;
+}
+level {
+  grid-area: level;
+}
+lines {
+  grid-area: lines;
+}
+preview {
+  grid-area: preview;
+}
+game {
+  grid-area: game;
+}
+
+main {
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 100px 180px 80px;
+  grid-template-areas:
+    'lines score'
+    'game score'
+    'game preview'
+    'game level'
+    'game empty';
+}
+
+p {
+  margin: 0;
+  font-size: 1.38rem;
+  color: #fff;
+}

@@ -16,6 +16,7 @@ app({
     nextPiece: makePiece(),
     piece: makePiece(),
     grid: makeGrid(),
+    topScore: 0,
     score: 0,
     level: 1,
     lines: 0,

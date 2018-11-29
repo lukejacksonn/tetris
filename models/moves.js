@@ -79,6 +79,7 @@ export const move = (m = x => x) => state => {
     score: 0,
     lines: 0,
     level: 0,
+    topScore: state.score > state.topScore ? state.score : state.topScore
   }
 }
 
