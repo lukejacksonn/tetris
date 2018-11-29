@@ -1,8 +1,8 @@
-Tetris
+# Tetris
 
 > The classic NES Tetris built with hyperapp
 
-I recently got quite hooked on watching the [CTWC](https://thectwc.com). This inspired me to go try build the game Tetris for myself in order to better understand the game. There has been talk on the [hyperapp slack](https://hyperapp.slack.com) about creating a project – working application built with hyperapp – that we can use to dogfood new ideas and serve as a reference when creating their own apps.
+I recently got quite hooked on watching the [CTWC](https://thectwc.com). This inspired me to go try build the game Tetris for myself in order to better understand the game. There has been talk on the [hyperapp slack](https://hyperapp.slack.com) about creating a project – working application built with hyperapp – that we can use to dogfood new ideas and serve as a reference when creating new apps.
 
 The idea of a game came up and it seemed like a good theme to run with; limited enough in scope but complex enough to stress test design patterns and perf. I wanted to implement a dependency _and_ build step free project as to put focus mostly on the application code as well as structure.
 
