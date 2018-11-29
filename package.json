@@ -1,7 +1,7 @@
 {
-  "name": "sapling",
+  "name": "tetris",
   "version": "1.0.0",
-  "description": "A super minimal setup for modern web projects.",
+  "description": "The classic NES Tetris built with hyperapp",
   "main": "index.js",
   "scripts": {
     "start": "npx servor"
