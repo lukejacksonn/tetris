@@ -4,7 +4,7 @@
   "description": "The classic NES Tetris built with hyperapp",
   "main": "index.js",
   "scripts": {
-    "start": "npx servor"
+    "start": "npx servor src"
   },
   "prettier": {
     "semi": false,
